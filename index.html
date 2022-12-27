@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syncy</title>
+    <style>
+        /* css for the page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'dosis', sans-serif;
+        }
+
+        header {
+            height: 8vh;
+            background-color: #080829;
+            color: #fff;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            padding: 1rem;
+        }
+
+        header h1 {
+            /* margin-left: 1rem; */
+            font-size: 1.5rem;
+        }
+    
+        .logo {
+            width: 40px;
+            margin-right: 1rem;
+        }
+        
+        .hero__content {
+            width: 100%;
+            height: 30vh;
+            padding: 1rem;
+            margin-bottom: 4rem;
+
+            /* vertically center content  */
+            display: flex;
+
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #333;
+            color: #fff;
+
+            background-image: url('https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h2 {
+            margin-bottom: 0.5rem;
+
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            margin-bottom: 0.5rem;
+
+            font-size: 1.6rem;
+        }
+
+        .main {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 1rem;
+
+            margin-bottom: 4rem;
+        }
+
+        .main__content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* gap between left and right */
+        .main__content--left, .main__content--right {
+            padding: 0 1rem;
+        }
+
+        .main__content--left {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main__content--right {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+            /* padding: 1rem; */
+            background-color: #fff;
+            /* border: 1px solid #ccc; */
+        }
+
+        .card__image {
+            width: 30%;
+        }
+
+        .card__image img {
+            width: 80%;
+        }
+
+        .card__content {
+            width: 70%;
+        }
+
+        .card__content h4 {
+            margin-bottom: 0.5rem;
+
+            font-size: 1.5rem;
+        }
+
+        .card__content p {
+            margin-bottom: 0.5rem;
+
+            font-size: 1.2rem;
+        }
+
+        form {
+            width: 80%;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+
+            padding: 1rem;
+
+            background-color: #080829;
+
+            border-radius: 4px;
+        }
+
+        /* form title & subtitle */
+        form h3 {
+            margin-bottom: 0.5rem;
+            text-align: center;
+            color: #fff;
+
+            font-size: 1.8rem;
+        }
+
+        form p {
+            margin-bottom: 2.5rem;
+            text-align: center;
+            color: #fff;
+
+            font-size: 1.2rem;
+        }
+
+        form label {
+            margin: 0.5rem 0;
+
+            color: #fff;
+        }
+
+        form input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+
+            font-size: 1.1rem;
+
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #fff;
+        }
+
+        form button {
+            width: 100%;
+            padding: 1.2rem;
+            margin: 0.5rem 0;
+            /* background-color: #333; */
+            background-color: orangered;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+
+            cursor: pointer;
+
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        form button:active {
+            background-color: #777;
+        }
+
+        form button:focus {
+            outline: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .main__content {
+                flex-direction: column;
+            }
+
+            .main__content--left {
+                width: 100%;
+            }
+
+            .main__content--right {
+                width: 100%;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- wesbite header with 10% of viewport height -->
+    <header>
+        <!-- website logo -->
+        <img class="logo" src="https://syncy.net/images/logo-p-500.png" alt="Syncy Logo">
+        <h1>Syncy</h1>
+    </header>
+
+    <!-- hero section with 30% of viewport height -->
+    <section class="hero">
+        <div class="hero__content">
+            <h2>Pitch top Influencers to promote your startup</h2>
+            <p>Ask Influencers to spread the word about your startup to their audiences and grow at light speed.</p>
+        </div>
+    </section>
+
+    <!-- main content section with 60% of viewport height -->
+    <section class="main">
+        <!-- <h2>Main Content</h2> -->
+        <!-- 2 sections: left is 60% and right is 40%. -->
+        <div class="main__content">
+            <div class="main__content--left">
+                <!-- <h3>Left Content</h3> -->
+                <!-- 3 separate cards stacked vertically with small svg images on the right and title and description each -->
+                <div class="card">
+                    <div class="card__image">
+                        <img src="https://syncy.net/images/startups-entrepreneurship-and-growth-1-p-800.png" alt="card image">
+                    </div>
+                    <div class="card__content">
+                        <h4>End "spray and pray"</h4>
+                        <p>Stop wasting your time sending cold emails and LinkedIn messages to strangers.</p>
+                    </div>
+                 </div>
+
+                <div class="card">
+                    <div class="card__image">
+                        <img src="https://syncy.net/images/athletes-posing-in-action-p-800.png" alt="card image">
+                    </div>
+                    <div class="card__content">
+                        <h4>Book in two minutes</h4>
+                        <p>Get an appointment on the calendar with no scheduling headaches.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image">
+                        <img src="https://syncy.net/images/people-video-chatting-at-home-p-1080.png" alt="card image">
+                    </div>
+                    <div class="card__content">
+                        <h4>Get more success</h4>
+                        <p>Meet over Zoom for a half-hour sync to pitch directly to your target influencer and convince them to create content for
+                        you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main__content--right">
+                <!-- <h3>Right Content</h3> -->
+                <!-- form title and descirption -->
+                <form action="">
+                    <h3>Request a demo</h3>
+                    <p>Get a demo of Syncy and see how it can help you grow your startup.</p>
+                <!-- a form to collect first name, last name and email for requesting more details -->
+                    <!-- <label for="first-name">First Name</label> -->
+                    <input type="text" name="first-name" id="first-name" placeholder="First Name">
+                    <!-- <label for="last-name">Last Name</label> -->
+                    <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+                    <!-- <label for="email">Email</label> -->
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+    </section>
+</body>
+</html>
